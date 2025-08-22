@@ -41,7 +41,7 @@ export const useAuth = () => {
 
   const forgotPassword = async (email) => {
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: "http://localhost:5173/reset-password", // frontend reset page
+      redirectTo: "https://skyvault-f029eqb95-sandesh-shinde-s-projects.vercel.app/reset-password", // frontend reset page
     });
     if (error) throw error;
     return true;
